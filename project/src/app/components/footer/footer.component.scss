@@ -1,0 +1,120 @@
+footer {
+  padding: 42px 32px 20px;
+  background-color: #fff;
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 36px;
+    border-bottom: 1px solid #f7f7f7;
+    position: relative;
+    padding-right: 50px;
+    .logo-container {
+      a {
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .contact {
+      display: flex;
+      column-gap: 3.5vw;
+      row-gap: 18px;
+      flex-wrap: wrap;
+      .contact-sub-content {
+        display: flex;
+        .contact-icon {
+          width: 30px;
+          height: 20px;
+          padding-top: 5px;
+          i {
+            font-size: 20px;
+          }
+        }
+        .contact-sub-content {
+          display: flex;
+          flex-direction: column;
+          span {
+            font-family: medium;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: -0.02em;
+            color: #5c6975;
+          }
+          a {
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: -0.02em;
+            color: blue;
+          }
+        }
+      }
+    }
+
+    button {
+      width: 40px;
+      height: 50px;
+      min-width: 40px;
+      min-height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #091826;
+      border-radius: 10px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: 0.3s ease all;
+      &:hover {
+        background-color: #c6efdf;
+        i {
+          color: #6e55bf;
+        }
+        cursor: pointer;
+      }
+      i {
+        color: white;
+        transition: 0.3s ease all;
+      }
+    }
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: -0.04em;
+    color: #5c6975;
+    padding-top: 20px;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .logo-container {
+    padding-bottom: 38px;
+  }
+  footer {
+    padding: 32px 15px 0;
+    p {
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 300px) {
+  .contact-sub-content {
+    span {
+      font-size: 10px !important;
+    }
+    a {
+      font-size: 10px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    padding-bottom: 88px;
+  }
+}

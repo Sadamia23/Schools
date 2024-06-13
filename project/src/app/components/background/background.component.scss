@@ -1,0 +1,83 @@
+.icon {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(#eff2f4 0.1em, transparent 0.1em),
+    linear-gradient(90deg, #eff2f4 0.1em, transparent 0.1em);
+  background-size: 1.5em 1.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+
+  .background-header {
+    padding: 400px;
+    background: linear-gradient(
+      180deg,
+      #c6efdf 0%,
+      #c6efdf 30.73%,
+      rgba(198, 239, 223, 0.8) 54.69%,
+      rgba(198, 239, 223, 0) 100%
+    );
+    .ellipse-positioning {
+      left: 300px;
+      top: -67px;
+      .ellipse-icon {
+        border-radius: 50%;
+        opacity: 0.05;
+        border: 30px solid #091826;
+        img {
+          width: 71px;
+          height: 71px;
+        }
+      }
+    }
+
+    .ellipse-positioning-2 {
+      left: 226px;
+      top: 207px;
+      .ellipse-icon {
+        border-radius: 50%;
+        opacity: 0.05;
+        border: 10px solid #091826;
+        height: 62px;
+        img {
+          width: 42px;
+          height: 42px;
+        }
+      }
+    }
+
+    .rect-positioning {
+      right: 10px;
+      top: 20px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .rect-positioning-2 {
+      left: 8px;
+      top: 20px;
+      .rect-icon {
+        margin: 12px;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hidden {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+header {
+  padding: 3.5vw;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .logo {
+    a {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .content-right {
+    margin-left: auto;
+    margin-right: 0;
+    font-size: 14px;
+    height: 52px;
+    background: rgba(9, 24, 38, 0.12);
+    border-radius: 12px;
+    padding: 1vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .nav-container {
+        border-right: 1px solid #3b5157;
+        padding: 0 20px;
+        float: left;
+        display: flex;
+        justify-content: center;
+        .page-link {
+          color: #000;
+          text-decoration: none;
+          display: inline-flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          gap: 10px;
+          justify-content: flex-start;
+          align-items: center;
+          transition: 0.3s all ease;
+          &:hover {
+            color: #3b5157;
+          }
+
+          &.active {
+            color: #6e55bf !important;
+          }
+          i {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-mobile {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  nav {
+    height: 88px;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      .page-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #89979b;
+        transition: 0.3s ease all;
+        &:hover {
+          color: #000;
+        }
+        &.active {
+          padding: 8px 12px;
+          background-color: #6e55bf1a;
+          border-radius: 8px;
+          color: #6e55bf;
+        }
+        i {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 944px) {
+  header {
+    padding: 24px;
+  }
+  .page-link span {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  header {
+    padding: 10px;
+  }
+}

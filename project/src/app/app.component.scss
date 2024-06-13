@@ -1,0 +1,22 @@
+
+.main-border:before {
+  content: "";
+  margin: 10px;
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  height: 100vh;
+  padding: 10px;
+  border-radius: 32px;
+  background: linear-gradient(to bottom, #091826 0%, rgba(9, 24, 38, 0) 86.46%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+@media only screen and (max-width: 945px) {
+  .main-border {
+    display: none;
+  }
+}

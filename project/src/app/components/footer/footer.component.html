@@ -1,0 +1,47 @@
+<footer>
+  <div class="contact-container">
+    <div class="logo-container">
+      <a href="https://emis.ge/" target="_blank">
+        <img src="../../../assets/icons/logo-emis.png" alt="Logo Emis" />
+      </a>
+    </div>
+    <div class="contact">
+      <div class="mail-container contact-sub-content">
+        <div class="contact-icon">
+          <i class="pi pi-envelope"></i>
+        </div>
+        <div class="contact-sub-content">
+          <span>ელექტრონული ფოსტა</span>
+          <a href="mailto:info@emis.ge">{{ data.email }}</a>
+          <a href="mailto:Info.nsm@mes.gov.ge">{{ data.alternateEmail }}</a>
+        </div>
+      </div>
+      <div class="phone-container contact-sub-content">
+        <div class="contact-icon">
+          <i class="pi pi-phone"></i>
+        </div>
+        <div class="contact-sub-content">
+          <span>ტელეფონის ნომერი </span>
+          <a href="tel:0322200220">{{ data.phoneNumber }}</a>
+        </div>
+      </div>
+      <div class="address-container contact-sub-content">
+        <div class="contact-icon">
+          <i class="pi pi-map-marker"></i>
+        </div>
+        <div class="contact-sub-content">
+          <span>მისამართი</span>
+          <a
+            href="https://www.google.com/maps/place/GIPA+-+School+of+Law+and+Politics/@41.7298438,44.7647121,17z/data=!3m1!4b1!4m6!3m5!1s0x4044731edea6095f:0xa1b64d9420213260!8m2!3d41.7298438!4d44.767287!16s%2Fg%2F11tfkjx_bd?entry=ttu"
+            target="_blank"
+            >{{ data.address }}</a
+          >
+        </div>
+      </div>
+    </div>
+    <button (click)="scrollToTop()">
+      <i class="pi pi-angle-up"></i>
+    </button>
+  </div>
+  <p>© Copyright 2012-2024. All rights reserved</p>
+</footer>

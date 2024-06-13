@@ -1,0 +1,193 @@
+.education-information {
+  padding: 45px 10vw;
+
+  .education-title-container {
+    padding-bottom: 15px;
+    h1 {
+      margin: 0px;
+      font-size: 36px !important;
+      line-height: 54px !important;
+      p {
+        margin: 0px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .education-main-container {
+    padding: 15px 0 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    .single-card {
+      flex: 30%;
+      min-width: 360px !important;
+      max-height: 300px;
+      padding: 30px;
+      background: #f6f5fa;
+      border-radius: 16px;
+      min-height: 280px;
+      min-width: 255px;
+      flex: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .card-top {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .card-icon {
+          min-width: 52px;
+          height: 52px;
+          background: #c6efdf;
+          border-radius: 50%;
+          margin-right: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          i {
+            font-size: 22px;
+            color: #fff;
+          }
+        }
+        .title {
+          h2 {
+            font-size: 22px;
+            line-height: 33px;
+            color: #091826;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            column-gap: 5px;
+            margin: 0;
+            font-weight: 400;
+          }
+          span {
+            font-size: 22px !important;
+            line-height: 33px !important;
+            font-weight: 600;
+          }
+        }
+      }
+      .card-middle {
+        height: 162px;
+        width: 100%;
+        height: 162px;
+        padding-top: 23px;
+        padding-bottom: 15px;
+        overflow: hidden;
+        p {
+          display: -webkit-box;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          font-size: 12px;
+          letter-spacing: -0.02em;
+          color: #091826;
+          opacity: 0.7;
+          margin: 0;
+        }
+      }
+      .card-bottom {
+        padding: 20px 20px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        button {
+          width: 65px;
+          height: 42px;
+          background: #091826;
+          border-radius: 21px;
+          border: none;
+          outline: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          cursor: pointer;
+          transition: ease-in-out 0.2s;
+          &:hover {
+            background-color: #c6efdf;
+            color: #091826;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .education-information .education-main-container .single-card .card-middle p {
+    -webkit-line-clamp: 4;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .education-information .education-main-container .single-card {
+    max-height: 281px;
+    .card-top .title h2 {
+      font-size: 2.2vw !important;
+      line-height: 24px !important;
+    }
+    .card-top .title span {
+      font-size: 2.2vw !important;
+      line-height: 24px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .education-information {
+    .education-title-container {
+      h1 {
+        font-size: 22px !important;
+        line-height: 33px !important;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .education-information {
+    padding: 10px;
+    .card-bottom {
+      padding-top: 0px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  .education-information {
+    .education-main-container {
+      .single-card {
+        min-width: 90% !important;
+
+        .card-top {
+          .card-icon {
+            min-width: 30px;
+            width: 30px !important;
+            height: 30px;
+            i {
+              font-size: 15px;
+            }
+          }
+          .title {
+            h2 {
+              font-size: 16px !important;
+              line-height: 20px !important;
+            }
+            span {
+              font-size: 16px !important;
+              line-height: 20px !important;
+            }
+          }
+        }
+
+        .card-bottom {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
