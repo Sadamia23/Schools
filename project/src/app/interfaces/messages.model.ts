@@ -1,0 +1,8 @@
+export interface DetailKey {
+  NATIONAL_EDUCATIONAL_PLAN: string;
+  GENERAL_EDUCATION_NATIONAL_GOALS: string;
+  SCHOOLS_SELF_EVALUATION: string;
+  GEORGIAN_EDUCATION_SYSTEM: string;
+  STUDENTS_RIGHTS_AND_GUARANTEES: string;
+  BOLD?: DetailKey;
+}

@@ -12,7 +12,6 @@ export class HomeComponent {
   constructor(private _generalDataService: GeneralDataService) {
     this._generalDataService.getGeneralData().subscribe((data) => {
       this.data = data;
-      console.log(data);
     });
   }
 }

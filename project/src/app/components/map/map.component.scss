@@ -1,0 +1,116 @@
+section {
+  padding: 45px 10vw;
+  .map-title-container {
+    padding-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      font-size: 12px !important;
+      line-height: 18px !important;
+      letter-spacing: 0.96px !important;
+      font-weight: 600;
+      font-feature-settings: "case" on;
+      padding-bottom: 5px;
+      color: #5594cf;
+      margin: 0;
+    }
+    h3 {
+      margin: 0;
+      font-size: 36px !important;
+      line-height: 54px !important;
+      font-weight: 400;
+      display: flex;
+      color: #091826;
+      align-items: center;
+      column-gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+  .map {
+    svg {
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 100%;
+      max-height: 660px;
+      height: auto;
+      overflow: hidden;
+      fill: #ced3f4;
+      path {
+        outline: none !important;
+        transition: 0.15s all ease;
+        cursor: pointer;
+        &:hover {
+          fill: #f08a3a;
+        }
+      }
+    }
+  }
+}
+
+.content-top {
+  display: flex;
+  justify-content: space-between;
+  .region {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .content-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(127, 101, 208);
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.content-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  div {
+    display: flex;
+    flex-direction: column;
+    color: rgb(95, 94, 94);
+    span {
+      color: black;
+      font-weight: 800;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    .map-title-container {
+      h3 {
+        font-size: 22px !important;
+        line-height: 33px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .content-top {
+    .region {
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+  .content-bottom {
+    font-size: 12px;
+  }
+}

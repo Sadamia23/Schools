@@ -11,8 +11,19 @@ import { GeneralEducationComponent } from './components/general-education/genera
 import { SchoolsComponent } from './components/schools/schools.component';
 import { LegislationComponent } from './components/legislation/legislation.component';
 import { HomeComponent } from './components/home/home.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { EducationInformationComponent } from './components/education-information/education-information.component';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { FormsModule } from '@angular/forms';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MapComponent } from './components/map/map.component';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
@@ -25,14 +36,22 @@ import { EducationInformationComponent } from './components/education-informatio
     LegislationComponent,
     HomeComponent,
     EducationInformationComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ProgressSpinnerModule,
+    FormsModule,
+    NzModalModule,
   ],
-  providers: [],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US },
+    provideAnimationsAsync(),
+    provideHttpClient(),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

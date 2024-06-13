@@ -14,6 +14,11 @@
     }
   }
 
+  .spinner {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+  }
   .education-main-container {
     padding: 15px 0 25px;
     display: flex;
@@ -78,15 +83,15 @@
         padding-bottom: 15px;
         overflow: hidden;
         p {
-          display: -webkit-box;
-          -webkit-line-clamp: 5;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          font-size: 12px;
-          letter-spacing: -0.02em;
-          color: #091826;
-          opacity: 0.7;
-          margin: 0;
+          display: -webkit-box !important;
+          -webkit-line-clamp: 4 !important;
+          -webkit-box-orient: vertical !important;
+          overflow: hidden !important;
+          font-size: 12px !important;
+          letter-spacing: -0.02em !important;
+          color: #091826 !important;
+          opacity: 0.7 !important;
+          margin: 0 !important;
         }
       }
       .card-bottom {
@@ -117,11 +122,6 @@
   }
 }
 
-@media only screen and (max-width: 1023px) {
-  .education-information .education-main-container .single-card .card-middle p {
-    -webkit-line-clamp: 4;
-  }
-}
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .education-information .education-main-container .single-card {
     max-height: 281px;
