@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MapComponent } from './components/map/map.component';
 import { NzModalModule } from 'ng-zorro-antd/modal';
+import { DetailsComponent } from './components/details/details.component';
 
 registerLocaleData(en);
 
@@ -37,6 +38,7 @@ registerLocaleData(en);
     HomeComponent,
     EducationInformationComponent,
     MapComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

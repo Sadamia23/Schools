@@ -17,7 +17,6 @@ export class MapComponent {
       .getRegionsSchoolCount()
       .subscribe((data) => {
         this.regionsSchoolCount = data;
-        console.log(data);
       });
   }
 

@@ -27,6 +27,16 @@ export class APIBuilder {
       this.PROXY_SERVER + this.DOMAIN_URL + this.BACK + this.EDUCATION_INFO
     }`;
   }
+  public static getEducationInfoDetails(key: string) {
+    return `${
+      this.PROXY_SERVER +
+      this.DOMAIN_URL +
+      this.BACK +
+      this.EDUCATION_INFO +
+      '/' +
+      key
+    }`;
+  }
   public static getEducationInfoTitles() {
     return `${
       this.PROXY_SERVER + this.DOMAIN_URL + this.EDUCATION_INFO_TITLES

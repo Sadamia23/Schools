@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { EducationInfoService } from '../../services/education-info.service';
 import { DetailKey } from '../../interfaces/messages.model';
+import { IDetails } from '../../interfaces/details.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-education-information',
@@ -17,7 +19,9 @@ export class EducationInformationComponent {
   titles!: DetailKey;
   isLoading = false;
 
-  constructor(private _educationInfoService: EducationInfoService) {
+  constructor(
+    private _educationInfoService: EducationInfoService,
+  ) {
     this.isLoading = true;
     this._educationInfoService.getEducationInfo().subscribe((data) => {
       this.GENERAL_EDUCATION_NATIONAL_GOALS = this.convertStringToHTMLElement(

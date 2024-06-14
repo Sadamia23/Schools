@@ -4,6 +4,7 @@ import { SchoolsComponent } from './components/schools/schools.component';
 import { HomeComponent } from './components/home/home.component';
 import { GeneralEducationComponent } from './components/general-education/general-education.component';
 import { LegislationComponent } from './components/legislation/legislation.component';
+import { DetailsComponent } from './components/details/details.component';
 
 const routes: Routes = [
   {
@@ -27,9 +28,12 @@ const routes: Routes = [
     title: 'კანონმდებლობა',
   },
   {
+    path: 'details/:key',
+    component: DetailsComponent,
+  },
+  {
     path: '**',
     redirectTo: 'home',
-    
   },
 ];
 
