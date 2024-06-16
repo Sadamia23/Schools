@@ -39,7 +39,6 @@ main {
           justify-content: center;
           width: 52px;
           height: 52px;
-          background-color: #5594cf;
           i {
             font-size: 30px;
             color: #fff;
@@ -160,6 +159,7 @@ main {
       flex-wrap: wrap;
       gap: 12px;
       max-width: 852px;
+      justify-content: center;
       .file {
         width: 420px;
         padding: 16px 24px;
@@ -213,6 +213,44 @@ main {
             border-radius: 8px;
             background-color: #09182633;
             cursor: pointer !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 0 12px !important;
+    .file {
+      width: 90% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    .spinner {
+      margin: auto;
+      padding: 200px 0px;
+    }
+    .title-section {
+      .title-container {
+        padding: 10px;
+        font-size: 12px !important;
+        article {
+          .icon-container {
+            width: 30px;
+            height: 30px;
+            min-width: 30px;
+            i {
+              font-size: 20px;
+            }
+          }
+          h1 {
+            font-size: 16px !important;
+            line-height: 22px !important;
           }
         }
       }

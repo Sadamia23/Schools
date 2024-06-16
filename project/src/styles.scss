@@ -103,3 +103,182 @@ body {
     padding: 10px;
   }
 }
+
+/////////////////////////////////////////////////
+// sidebar
+.p-sidebar {
+  width: 45%;
+  .p-sidebar-content {
+    padding: 1rem !important; // Custom padding
+    .sidebar-container {
+      .sidebar-title {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+        i {
+          font-size: 20px;
+          color: black;
+          font-weight: 600;
+        }
+        span {
+          font-size: 16px;
+          font-weight: 800;
+        }
+      }
+      .description {
+        box-sizing: border-box;
+        line-height: 1.42;
+        max-height: 300px;
+        outline: none;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding: 12px 15px;
+        text-align: justify;
+        p {
+          margin: 0;
+        }
+      }
+      .files-section {
+        margin-top: 24px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+        p {
+          letter-spacing: 0.96px !important;
+          width: 100%;
+          font-weight: 800;
+          font-size: 12px;
+          line-height: 16px;
+          color: #5594cf;
+        }
+        article {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          justify-content: center;
+          .file {
+            width: 100%;
+            padding: 5px 10px;
+            background: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            .left {
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
+              .left-cont {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                i {
+                  color: #f24237;
+                  font-size: 28px;
+                }
+                span {
+                  font-family: regular;
+                  font-weight: 700;
+                  font-size: 14px;
+                  line-height: 21px;
+                  color: #091826;
+                  letter-spacing: -0.02em;
+                }
+              }
+            }
+            .right {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+              .download {
+                width: 38px;
+                height: 27px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+                background-color: #6e55bf33;
+                cursor: pointer !important;
+              }
+              .see {
+                width: 38px;
+                height: 27px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+                background-color: #09182633;
+                cursor: pointer !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .p-sidebar-header {
+    border-bottom: 1px solid #c4c4c4 !important;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .p-sidebar {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .p-sidebar {
+    width: 100%;
+    .p-sidebar-content {
+      padding: 5px !important;
+      .files-section {
+        padding: 0px;
+        .file {
+          .left {
+            gap: 10px !important;
+            .left-cont {
+              span {
+                font-size: 10px !important;
+                line-height: 14px !important;
+                max-height: 28px;
+                overflow: hidden;
+              }
+            }
+            p {
+              font-size: 10px !important;
+              margin: 0px !important;
+            }
+          }
+          .right {
+            gap: 4px !important;
+            button {
+              width: 30px !important;
+              height: 30px !important;
+              i {
+                font-size: 15px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar-container {
+  .files-section {
+    .file {
+      .left {
+        .left-cont {
+          span {
+          }
+        }
+      }
+    }
+  }
+}

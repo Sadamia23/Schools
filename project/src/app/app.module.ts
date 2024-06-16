@@ -9,7 +9,6 @@ import { BackgroundComponent } from './components/background/background.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GeneralEducationComponent } from './components/general-education/general-education.component';
 import { SchoolsComponent } from './components/schools/schools.component';
-import { LegislationComponent } from './components/legislation/legislation.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { EducationInformationComponent } from './components/education-information/education-information.component';
@@ -23,6 +22,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MapComponent } from './components/map/map.component';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { DetailsComponent } from './components/details/details.component';
+import { SidebarModule } from 'primeng/sidebar';
 
 registerLocaleData(en);
 
@@ -34,7 +34,6 @@ registerLocaleData(en);
     BackgroundComponent,
     GeneralEducationComponent,
     SchoolsComponent,
-    LegislationComponent,
     HomeComponent,
     EducationInformationComponent,
     MapComponent,
@@ -48,6 +47,7 @@ registerLocaleData(en);
     ProgressSpinnerModule,
     FormsModule,
     NzModalModule,
+    SidebarModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },

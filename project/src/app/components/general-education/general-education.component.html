@@ -1,1 +1,72 @@
-<p>general-education works!</p>
+<main>
+  <section class="title-section">
+    <article>
+      <aside class="title-container">
+        <h1 class="title">ზოგადი განათლება</h1>
+        <p>ზოგადი განათლება სატესტო</p>
+      </aside>
+      <aside class="icon-container">
+        <i class="pi pi-graduation-cap"></i>
+      </aside>
+    </article>
+  </section>
+  <section class="card-section">
+    <h3>თემატური ბმულები</h3>
+    <article class="cards">
+      <div class="card" *ngFor="let res of data.result">
+        <p class="date">{{ res.createTs.slice(0, 10) }}</p>
+        <div class="card-content">
+          <i class="pi pi-file"></i>
+          <span>{{ res.name }}</span>
+          <div class="description">
+            <p>
+              {{ res.description }}
+            </p>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <button (click)="showSidebar(res.id)">დეტალურად ნახვა</button>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
+
+<p-sidebar [(visible)]="sidebarVisible" position="right">
+  <div class="sidebar-container" *ngIf="getResultById(id) as item">
+    <div class="sidebar-title">
+      <div class="sidebar-icon">
+        <i class="pi pi-file"></i>
+      </div>
+      <span>{{ item.name }}</span>
+    </div>
+    <div class="description">
+      <p>{{ item.description }}</p>
+    </div>
+    <div class="files-section">
+      <p>თანდართული ფაილები</p>
+      <article>
+        <div class="file" *ngFor="let file of item.attachments">
+          <aside class="left">
+            <div class="left-cont">
+              <i class="pi pi-file-pdf"></i>
+              <span>{{ file.name }}</span>
+            </div>
+            <p>
+              <span>ატვირთვის თარიღი</span>
+              {{ file.createTs.slice(0, 10) }}
+            </p>
+          </aside>
+          <aside class="right">
+            <button class="download">
+              <i class="pi pi-download"></i>
+            </button>
+            <button class="see">
+              <i class="pi pi-arrow-up-right"></i>
+            </button>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</p-sidebar>
