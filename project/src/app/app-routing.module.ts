@@ -4,6 +4,7 @@ import { SchoolsComponent } from './components/schools/schools.component';
 import { HomeComponent } from './components/home/home.component';
 import { GeneralEducationComponent } from './components/general-education/general-education.component';
 import { DetailsComponent } from './components/details/details.component';
+import { SchoolDetailsComponent } from './components/school-details/school-details.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'details/:key',
     component: DetailsComponent,
+  },
+  {
+    path: 'schools/:id',
+    component: SchoolDetailsComponent,
   },
   {
     path: '**',

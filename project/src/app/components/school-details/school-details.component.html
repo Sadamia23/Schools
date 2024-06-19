@@ -1,0 +1,136 @@
+<section class="school-info">
+  <div class="main-picture-wrapper">
+    <article class="top-left">
+      <img
+        src="https://skolebi.emis.ge/back/imagedownload?attachmentId={{
+          schoolDetails.imageAttachmentId
+        }}"
+        *ngIf="schoolDetails.imageAttachmentId; else altImage"
+      />
+      <ng-template #altImage>
+        <img
+          src="https://www.creativefabrica.com/wp-content/uploads/2020/07/16/Hotel-Building-Icon-Graphics-4642793-1.jpg"
+        />
+      </ng-template>
+    </article>
+  </div>
+  <article class="top-right">
+    <div class="contact">
+      <div class="location">
+        <div class="location-icon">
+          <i class="pi pi-map-marker"></i>
+          <span
+            >{{ schoolDetails.regionName }},
+            {{ schoolDetails.districtName }}</span
+          >
+        </div>
+        <span class="address">{{ schoolDetails.address }}</span>
+      </div>
+      <a
+        href="{{ schoolDetails.socialNetwork }}"
+        target="_blank"
+        class="link"
+        *ngIf="schoolDetails.socialNetwork"
+      >
+        <i class="pi pi-facebook"></i>
+      </a>
+    </div>
+    <h1 class="school-name">{{ schoolDetails.name }}</h1>
+    <div class="school-staff">
+      <div class="director">
+        <div class="director-icon">
+          <i class="pi pi-user"></i>
+        </div>
+        <div class="staff-info">
+          <span>დირექტორი</span>
+          <p>{{ schoolDetails.principal }}</p>
+        </div>
+      </div>
+      <div class="status">
+        <div class="status-icon">
+          <i class="pi pi-graduation-cap"></i>
+        </div>
+        <div class="status-info">
+          <span>საგანმანათლებლო სტატუსი</span>
+          <p>{{ schoolDetails.educationStatus }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="school-details">
+      <article>
+        <div class="description school-type">
+          <i class="pi pi-building"></i>
+        </div>
+        <div class="info">
+          <span>სკოლის ტიპი</span>
+          <p *ngIf="schoolDetails.schoolType == 'PUBLIC'">საჯარო</p>
+          <p *ngIf="schoolDetails.schoolType == 'PRIVATE'">კერძო</p>
+        </div>
+      </article>
+      <article>
+        <div class="description building-count">
+          <i class="pi pi-building"></i>
+        </div>
+        <div class="info">
+          <span>შენობების რაოდენობა</span>
+          <p>{{ schoolDetails.buildingCount }}</p>
+        </div>
+      </article>
+      <article>
+        <div class="description phoneNumber">
+          <i class="pi pi-phone"></i>
+        </div>
+        <div class="info">
+          <span>ტელეფონის ნომერი</span>
+          <p>{{ schoolDetails.phoneNumber }}</p>
+        </div>
+      </article>
+      <article>
+        <div class="description email">
+          <i class="pi pi-inbox"></i>
+        </div>
+        <div class="info">
+          <span>ელ. ფოსტა</span>
+          <p>{{ schoolDetails.email }}</p>
+        </div>
+      </article>
+      <article>
+        <div class="description teacherCount">
+          <i class="pi pi-user"></i>
+        </div>
+        <div class="info">
+          <span>მასწავლებელთა რაოდენობა</span>
+          <p>{{ schoolDetails.teacherCount }}</p>
+        </div>
+      </article>
+      <article>
+        <div class="description studentCount">
+          <i class="pi pi-user"></i>
+        </div>
+        <div class="info">
+          <span>მოსწავლეთა რაოდენობა</span>
+          <p>{{ schoolDetails.studentCount }}</p>
+        </div>
+      </article>
+      <article>
+        <div class="description authorizations">
+          <i class="pi pi-calendar"></i>
+        </div>
+        <div class="info">
+          <span>ავტორიზაციის ვადები</span>
+          <p>{{ schoolDetails.authorizationEndDate.slice(0, 10) }}</p>
+        </div>
+      </article>
+      <article>
+        <div class="description sectors">
+          <i class="pi pi-book"></i>
+        </div>
+        <div class="info">
+          <span>სექტორი</span>
+          <p>{{ schoolDetails.sectors }}</p>
+        </div>
+      </article>
+    </div>
+  </article>
+  <article class="bot-right"></article>
+</section>

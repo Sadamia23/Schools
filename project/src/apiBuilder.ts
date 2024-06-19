@@ -9,6 +9,7 @@ export class APIBuilder {
   private static EDUCATION_INFO_TITLES = '/assets/lang/ka.json';
   private static REGIONS_SCHOOL_COUNT = '/regionschoolcount';
   private static GENERAL_EDUCATION_DATA = '/generaleducation?page=1&size=10';
+  private static REGION = '/region';
 
   public static useProxy() {
     return this.PROXY_SERVER;
@@ -57,8 +58,18 @@ export class APIBuilder {
     }`;
   }
 
-  // needs encodeURIComponent()
+  // Needs encodeURIComponent()
   public static getGeneralEducationData() {
     return `${this.DOMAIN_URL + this.BACK + this.GENERAL_EDUCATION_DATA}`;
+  }
+
+  public static getRegions() {
+    return `${
+      this.PROXY_SERVER +
+      this.DOMAIN_URL +
+      this.BACK +
+      this.SCHOOL +
+      this.REGION
+    }`;
   }
 }

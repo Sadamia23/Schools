@@ -23,6 +23,12 @@ import { MapComponent } from './components/map/map.component';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { DetailsComponent } from './components/details/details.component';
 import { SidebarModule } from 'primeng/sidebar';
+import { FilterComponent } from './components/filter/filter.component';
+import { ListboxModule } from 'primeng/listbox';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { DetailedFilterComponent } from './components/detailed-filter/detailed-filter.component';
+import { SchoolDetailsComponent } from './components/school-details/school-details.component';
 
 registerLocaleData(en);
 
@@ -37,17 +43,23 @@ registerLocaleData(en);
     HomeComponent,
     EducationInformationComponent,
     MapComponent,
-    DetailsComponent
+    DetailsComponent,
+    FilterComponent,
+    DetailedFilterComponent,
+    SchoolDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ListboxModule,
+    ReactiveFormsModule,
+    NzSelectModule,
     HttpClientModule,
     ProgressSpinnerModule,
     FormsModule,
     NzModalModule,
-    SidebarModule
+    SidebarModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },

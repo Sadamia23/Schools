@@ -19,9 +19,7 @@
           <i class="pi pi-file"></i>
           <span>{{ res.name }}</span>
           <div class="description">
-            <p>
-              {{ res.description }}
-            </p>
+            <p [innerHTML]="res.description"></p>
           </div>
         </div>
         <div class="card-bottom">
@@ -41,7 +39,7 @@
       <span>{{ item.name }}</span>
     </div>
     <div class="description">
-      <p>{{ item.description }}</p>
+      <p [innerHTML]="item.description"></p>
     </div>
     <div class="files-section">
       <p>თანდართული ფაილები</p>
